@@ -1,0 +1,63 @@
+@import 'variaveis';
+
+#about {
+    background-color: $corPrimaria;
+    padding: 70px 0 40px;
+
+    .about-img {
+        border-radius: 0 12px 12px 0;
+    }
+
+    .container-text {
+        max-width: 60%;
+        margin-left: 70px;
+
+        .section-title {
+            color: $corSecundaria;
+            text-align: start;
+        }
+
+        h2 {
+            margin-bottom: 12px;
+            color: $corBranco;
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        a {
+            color: $corBranco;
+        }
+    }
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+
+    #about {
+        .about-img {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .container-text {
+            max-width: 90%;
+            width: 100%;
+            margin-left: 40px;
+
+            a {
+                width: 90%;
+                margin-top: 24px;
+            }
+        }
+    }
+
+    .about-flex {
+        display: block;
+    }
+}

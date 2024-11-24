@@ -1,0 +1,111 @@
+@import 'variaveis';
+
+#footer {
+    background-color: $corPreto;
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+    color: $corBranco;
+
+    li {
+        list-style: none;
+    }
+
+    .logo {
+        margin-bottom: 24px;
+        font-size: $fontePrimaria;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-item {
+            margin: 0 6px;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: $corCinza;
+                font-size: 18px;
+                font-family: $fonteSecundaria;
+                letter-spacing: 1px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $corSecundaria;
+                }
+            }
+        }
+    }
+
+    .contact {
+        margin: 32px 0;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                margin: 0 12px;
+                font-size: 18px;
+                font-family: $fonteSecundaria;
+                color: $corSecundaria;
+            }
+        }
+    }
+
+    small {
+        margin-right: 24px;
+    }
+
+    .topo {
+        text-decoration: none;
+        color: $corPreto;
+        background-color: $corCinza;
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    #footer {
+
+        .links {
+            flex-wrap: wrap
+        }
+
+        .contact {
+            ul {
+                display: block;
+
+                li {
+                    margin: 12px 0;
+                }
+            }
+        }
+    }
+    .topo {
+        display: inline-block;
+        margin: 18px 0 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1124px) {
+    #footer {
+
+        .contact {
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin: 0 8px;
+                }
+            }
+        }
+    }
+}

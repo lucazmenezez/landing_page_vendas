@@ -1,0 +1,112 @@
+@import 'variaveis';
+
+#plans {
+    padding: 70px 0;
+
+    .container-plans {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        .plans-item {
+            padding: 24px;
+            background-color: $corPrimaria;
+            border-radius: 12px;
+            text-align: center;
+
+            h3 {
+                font-size: 28px;
+                font-family: $fonteSecundaria;
+                color: $corBranco;
+                letter-spacing: 1px;
+            }
+
+            .prices {
+                margin: 24px 0;
+
+                del {
+                    color: $corCinza;
+                }
+
+                .price {
+                    font-size: 56px;
+                    font-weight: bold;
+                    color: $corBranco;
+                    margin-left: 8px;
+                }
+            }
+
+            .plans-benefits {
+                p {
+                    margin-bottom: 4px;
+                }
+            }
+
+            a {
+                width: 80%;
+                display: inline-block;
+                text-decoration: none;
+                background-color: transparent;
+                color: $corBranco;
+                padding: 18px 24px;
+                border: 2px solid $corSecundaria;
+                border-radius: 12px;
+                font-size: 18px;
+                font-weight: bold;
+                font-family: $fonteSecundaria;
+                letter-spacing: 1px;
+                margin-top: 24px;
+                box-shadow: 0 0 15px $corSecundaria;
+                transition: background-color .5s ease;
+
+                &:hover {
+                    background-color: $corSecundaria;
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: darken($corPrimaria, 10%);
+
+                a {
+                    background-color: $corSecundaria;
+                    
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #plans {
+        .container-plans {
+            grid-template-columns: 1fr;
+
+            .plans-item {
+                .prices {
+                    .price {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1124px) {
+    #plans {
+        .container-plans {
+            grid-template-columns: 1fr 1fr;
+
+            .plans-item {
+                .prices {
+                    .price {
+                        font-size: 56px;
+                    }
+                }
+            }
+        }
+    }
+}

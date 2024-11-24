@@ -1,0 +1,171 @@
+@import 'styles/variaveis';
+@import 'styles/hero';
+@import 'styles/services';
+@import 'styles/benefits';
+@import 'styles/about';
+@import 'styles/faq';
+@import 'styles/footer';
+@import 'styles/plans';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1125px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        max-width: 90%;
+    }
+}
+
+.title {
+    font-family: $fontePrimaria;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    @media (max-width: 767px) {
+        font-size: 32px;
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 12px;
+    color: $corPrimaria;
+    font-size: 18px;
+    font-family: $fontePrimaria;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.text {
+    font-family: $fonteSecundaria;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-family: $fonteSecundaria;
+    color: $corCinza;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    color: $corBranco;
+    background-color: $corSecundaria;
+    padding: 24px 32px;
+    font-family: $fontePrimaria;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    border: 2px solid $corSecundaria;
+    transition: background-color .5s ease;
+    box-shadow: 0 0 15px $corSecundaria;
+    animation: pulse 2s infinite;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: $corSecundaria;
+    background-color: transparent;
+    padding: 24px 32px;
+    font-family: $fontePrimaria;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    border: 2px solid $corSecundaria;
+    transition: background-color .5s ease, color .5s ease;
+    box-shadow: 0 0 15px $corSecundaria;
+    animation: pulse 2s infinite;
+
+    &:hover {
+        background-color: $corSecundaria;
+        color: $corBranco;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0px $corSecundaria;
+    }
+    50% {
+        transform: scale(1.05); // Aumenta o tamanho
+        box-shadow: 0 0 25px $corSecundaria; // Cria um brilho maior
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0px $corSecundaria;
+    }
+}
+
+.btn-wpp {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img {
+        max-width: 74px;
+        transition: transform 0.4s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .tooltip-text   {
+        visibility: hidden;
+        position: absolute;
+        width: 120px;
+        top: 8px;
+        left: -144px;
+        padding: 4px;
+        border-radius: 8px;
+        text-align: center;
+        background-color: $corCinza;
+        color: $corPreto;
+        opacity: 0;
+        transition: opacity 0.4s;
+        font-family: $fonteSecundaria;
+    }
+
+    &:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .btn-wpp {
+        img {
+            max-width: 64px;
+        }
+    }
+}
+
+img {
+    @media (max-width: 767px) {
+        max-width: 90%;
+        width: 100%;
+    }
+}

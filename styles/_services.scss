@@ -1,0 +1,78 @@
+@import 'variaveis';
+
+#services {
+    padding: 70px 0;
+
+    li {
+        list-style: none;
+    }
+
+    i {
+        color: $corSecundaria;
+        font-size: 50px;
+    }
+
+    h2 {
+        text-align: center;
+        color: $corPrimaria;
+        margin-bottom: 40px;
+    }
+
+    .container-grid {
+
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+
+            &-item {
+                text-align: center;
+                padding: 40px 32px;
+                border: 2px solid $corPrimaria;
+                border-radius: 12px;
+                background-color: $corPrimaria;
+                box-shadow: 0 10px 20px $corPrimaria;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-10px);
+                }
+
+                h3 {
+                    color: $corBranco;
+                    margin: 24px 0;
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-family: $fonteSecundaria;
+                }
+
+                p {
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #services {
+        .container-grid {
+
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1124px) {
+    #services {
+        .container-grid {
+
+            .services-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}

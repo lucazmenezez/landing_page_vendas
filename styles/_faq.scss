@@ -1,0 +1,64 @@
+@import 'variaveis';
+
+#faq {
+    padding: 70px 0 40px;
+    background-color: $corBrancoEscuro;
+
+    .container-title {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            color: $corPrimaria;
+        }
+
+        p {
+            color: $corPreto;
+            margin: 18px 0 40px;
+        }
+    }
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 600px;
+        font-family: $fonteSecundaria;
+
+        details {
+            color: $corBranco;
+            margin-bottom: 24px;
+            width: 100%; /* Herdando o valor do contêiner */
+            box-shadow: 0 4px 8px rgba(30, 58, 138, 0.15); /* Sombra ajustada */
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+
+            summary {
+                background-color: $corPrimaria;
+                padding: 18px;
+                font-size: 24px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                cursor: pointer;
+                position: relative;
+                border-radius: 12px 12px 0 0;
+            }
+
+            p {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease, padding 0.5s ease;
+                padding: 18px;
+                background-color: darken($corPrimaria, 10%);
+            }
+
+            &[open] p {
+                max-height: 300px; /* Ajuste conforme o conteúdo */
+                padding: 18px;
+            }
+        }
+    }
+}
